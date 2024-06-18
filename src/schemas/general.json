@@ -1,0 +1,12 @@
+{
+  "version": "16.3.2",
+  "serviceTimestampsLog": false,
+  "serviceTimestampsDebug": false,
+  "servicePasswordEncryption": false,
+  "hostname": "testswitch",
+  "enableSecret": "$1$mERr$WWYFDFflcd5FpJh6NNHr41",
+  "enablePassword": "cisco",
+  "ipCef": false,
+  "ipv6Cef": false,
+  "spanningTreeMode": "pvst"
+}

@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  postgres:
+    container_name: my-postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: <> # Your username
+      POSTGRES_PASSWORD: <> # Your password
+      POSTGRES_DB: <> # Your database name
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  pgadmin:
+    container_name: my-pgadmin
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "<YourMail>"
+      PGADMIN_DEFAULT_PASSWORD: "<YourPassword>"
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+
+volumes:
+  pgdata:
